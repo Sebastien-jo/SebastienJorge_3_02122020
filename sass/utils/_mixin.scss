@@ -1,0 +1,43 @@
+@mixin mobile_only {
+    @media screen and(max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+
+@mixin text_menu ($size: $p_size){
+    font-weight: bold;
+    font-size: $size;
+    font-family: 'roboto', serif;
+}
+
+@mixin R_title ($size: $menu_size){
+    font-size: $size;
+    font-family: 'shrinkhand', serif;
+}
+
+@mixin R_descritpion {
+    position: absolute;
+    border-radius: 0% 0% 10px 10px;
+    background-color: #fff;
+    height: 20%;
+}
+
+@mixin Boutton{
+    display: inline-block;
+    box-shadow: $b_shadow;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, $cd_secondary 45%, $cd_primary);
+    padding: 15px;
+    margin: auto;
+    z-index: 1;
+    
+    &:hover{
+        z-index: -1;
+        opacity:  1;
+        cursor: pointer;
+        background: linear-gradient(to bottom left, $cd_secondary 45%, $cd_primary);
+    }
+}    
+
+
