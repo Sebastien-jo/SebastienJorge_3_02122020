@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "robotoregular";
-  src: url("Roboto-Regular-webfont.eot");
+  src: url("policesweb fontsroboto_regular_macromanRoboto-Regular-webfont.eott");
   src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal;
@@ -13,6 +13,13 @@
   font-family: "robotobold";
   src: url("Roboto-Bold-webfont.eot");
   src: url("Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Bold-webfont.woff2") format("woff2"), url("Roboto-Bold-webfont.woff") format("woff"), url("Roboto-Bold-webfont.ttf") format("truetype"), url("Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoblack";
+  src: url("Roboto-Black-webfont.eot");
+  src: url("Roboto-Black-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Black-webfont.woff2") format("woff2"), url("Roboto-Black-webfont.woff") format("woff"), url("Roboto-Black-webfont.ttf") format("truetype"), url("Roboto-Black-webfont.svg#robotoblack") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,12 +32,16 @@ header {
   text-align: left;
   margin: 30px;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 980px) {
   header {
-    width: 100%;
+    position: relative;
+    width: 102%;
     margin: auto;
     text-align: center;
-    box-shadow: 0px 4px 5px 0px #888;
+    box-shadow: 0px 8px 3px -3px #cdcdcd;
+  }
+  header .logo {
+    height: 100px;
   }
 }
 
@@ -40,17 +51,136 @@ header {
   align-items: center;
   width: 200px;
   margin-left: 30px;
-  background: #c4c4c4;
+  background: #e6e6e6;
   border-radius: 20px;
   padding: 10px;
   padding-left: 20px;
 }
 .BarreRecherche #barre_recherche {
-  background: #c4c4c4;
+  background: #e6e6e6;
   border: 0px;
-  border-radius: 20px;
   outline-style: none;
   font-size: 1rem;
+}
+@media screen and (max-width: 980px) {
+  .BarreRecherche {
+    justify-content: center;
+    width: 99%;
+    border-radius: 0;
+    margin: auto;
+    font-size: 1.8rem;
+  }
+  .BarreRecherche #barre_recherche {
+    font-size: 1.5rem;
+    width: 300px;
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+.Presentation {
+  margin-left: 30px;
+  font-size: 1.2rem;
+  font-family: "robotoregular";
+}
+@media screen and (max-width: 980px) {
+  .Presentation {
+    text-align: center;
+    background: #f3f3f3;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 40px;
+    font-size: 2rem;
+  }
+  .Presentation h2 {
+    font-weight: bold;
+  }
+}
+
+.Bouton_titre {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  display: inline-block;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 2px #d9d9d9;
+}
+.Bouton_titre a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 30px;
+}
+
+.Notice {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  font-size: 1.2rem;
+}
+.Notice h2 {
+  margin-left: 50px;
+}
+.Notice li {
+  background: #fcfbfe;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px 2px #d9d9d9;
+  list-style-type: none;
+}
+.Notice li > i {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #b3b3b3;
+}
+.Notice li p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  display: inline-block;
+  left: 53px;
+  background: #9356DC;
+  border-radius: 40px;
+  height: 20px;
+  width: 20px;
+}
+.Notice li p.Num1 {
+  top: 81px;
+}
+.Notice li p.Num2 {
+  top: 154px;
+}
+.Notice li p.Num3 {
+  top: 225px;
+}
+.Notice :hover.Fonction_1, .Notice :hover.Fonction_1 .Fonction_2:hover {
+  cursor: pointer;
+  background: #e4d5f6;
+}
+.Notice :hover.Fonction_1 i, .Notice :hover.Fonction_1 .Fonction_2:hover i {
+  color: #9356DC;
+}
+@media screen and (max-width: 980px) {
+  .Notice {
+    font-size: 2rem;
+    position: relative;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Notice h2 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .Notice .Fonction {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,19 +24,17 @@
 }
 
 @mixin Boutton{
+    background:  linear-gradient(to bottom right, $cd_secondary, $cd_primary);
     display: inline-block;
-    box-shadow: $b_shadow;
     border-radius: 30px;
-    background: linear-gradient(to bottom right, $cd_secondary 45%, $cd_primary);
-    padding: 15px;
-    margin: auto;
-    z-index: 1;
+    padding: 10px;
+    box-shadow: $b_shadow;
     
-    &:hover{
-        z-index: -1;
-        opacity:  1;
-        cursor: pointer;
-        background: linear-gradient(to bottom left, $cd_secondary 45%, $cd_primary);
+    & a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 30px;
     }
 }    
 

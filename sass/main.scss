@@ -12,10 +12,14 @@ header{
     text-align: left;
     margin: 30px;
     @include mobile_only{
-        width: 100%;
+        position: relative;
+        width: 102%;
         margin: auto;
         text-align: center;
-        box-shadow: 0px 4px 5px 0px #888;
+        box-shadow: 0px 8px 3px -3px darken($cd_form, 10) ;
+        & .logo{
+            height: 100px;
+        }
     }
 }
 
@@ -25,15 +29,133 @@ header{
     align-items: center;
     width: 200px;
     margin-left: 30px;
-    background: rgb(196, 196, 196);
+    background: $cd_form;
     border-radius: 20px;
     padding: 10px;
     padding-left: 20px;
      & #barre_recherche{
-         background: rgb(196, 196, 196);
+         background: $cd_form;
          border: 0px;
-         border-radius: 20px;
          outline-style: none;
          font-size: 1rem;
      }
+     @include mobile_only{
+         justify-content: center;
+         width: 99%;
+         border-radius: 0;
+         margin: auto;
+         font-size: 1.8rem;
+            & #barre_recherche{
+                 font-size: 1.5rem;
+                 width: 300px;
+                 text-align: left;
+                 margin-left: 10px;
+            }
+        }   
+
+        
+} 
+
+.Presentation{
+    margin-left: 30px;
+    font-size: 1.2rem;
+    font-family: "robotoregular";
+
+    @include mobile_only{
+        text-align: center;
+        background: lighten($cd_form, 5);
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        padding-bottom: 40px;
+        font-size: 2rem;
+            & h2{
+                font-weight: bold;
+            }    
+    }
 }
+
+.Bouton_titre{
+    @include Boutton    
+}
+
+.Notice{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 1.2rem;
+
+        & h2{
+            margin-left: 50px;
+        }        
+        & li{
+           background: lighten($cd_primary, 39);
+           margin: 20px;
+           padding: 15px;
+           border-radius: 20px;
+           box-shadow: $b_shadow;
+           list-style-type: none;
+           
+           >i{
+               margin-right: 15px;
+               margin-left: 15px;
+               color: darken($cd_form, 20);
+           }
+           & p{
+               font-size: 1rem;
+               color: #fff;
+               text-align: center;
+               justify-content: center;
+               position: absolute;
+               display: inline-block;
+               left: 53px;
+               background: $cd_primary;
+               border-radius: 40px;
+               height: 20px;
+               width: 20px;
+
+               &.Num1{
+                   top: 81px;
+               }
+               &.Num2{
+                   top: 154px;
+               }
+               &.Num3{
+                   top: 225px;
+               }
+           }
+        }
+        & :hover.Fonction_1{
+            cursor: pointer;
+            background: lighten($cd_primary, $amount: 30);
+            .Fonction_2{
+                @extend .Fonction_1;
+            }
+                & i{
+                    color: $cd_primary;
+                }
+        }
+
+        @include mobile_only{
+            font-size: 2rem;
+            position: relative;
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            & h2{
+                display: flex;
+                justify-content: flex-start;
+            }
+            & .Fonction{
+                display: flex;
+                width:500px;
+                justify-content: space-around;
+                
+            }
+        }
+}
+    
+
+    
