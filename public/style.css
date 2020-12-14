@@ -1,31 +1,10 @@
-@font-face {
-  font-family: "shrinkhand";
-  src: url(polices\Shrikhand-Regular.otf);
-}
-@font-face {
-  font-family: "robotoregular";
-  src: url("policesweb fontsroboto_regular_macromanRoboto-Regular-webfont.eott");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotobold";
-  src: url("Roboto-Bold-webfont.eot");
-  src: url("Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Bold-webfont.woff2") format("woff2"), url("Roboto-Bold-webfont.woff") format("woff"), url("Roboto-Bold-webfont.ttf") format("truetype"), url("Roboto-Bold-webfont.svg#robotobold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotoblack";
-  src: url("Roboto-Black-webfont.eot");
-  src: url("Roboto-Black-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Black-webfont.woff2") format("woff2"), url("Roboto-Black-webfont.woff") format("woff"), url("Roboto-Black-webfont.ttf") format("truetype"), url("Roboto-Black-webfont.svg#robotoblack") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 .Bloc_page {
-  width: 1900px;
+  width: 1920px;
   margin: auto;
+}
+
+body {
+  font-family: "Roboto";
 }
 
 header {
@@ -35,7 +14,7 @@ header {
 @media screen and (max-width: 980px) {
   header {
     position: relative;
-    width: 102%;
+    width: 100%;
     margin: auto;
     text-align: center;
     box-shadow: 0px 8px 3px -3px #cdcdcd;
@@ -81,7 +60,6 @@ header {
 .Presentation {
   margin-left: 30px;
   font-size: 1.2rem;
-  font-family: "robotoregular";
 }
 @media screen and (max-width: 980px) {
   .Presentation {
@@ -147,20 +125,20 @@ header {
   height: 20px;
   width: 20px;
 }
-.Notice li p.Num1 {
+.Notice .Num1 {
   top: 81px;
 }
-.Notice li p.Num2 {
+.Notice .Num2 {
   top: 154px;
 }
-.Notice li p.Num3 {
+.Notice .Num3 {
   top: 225px;
 }
-.Notice :hover.Fonction_1, .Notice :hover.Fonction_1 .Fonction_2:hover {
+.Notice .Fonction_1:hover, .Notice .Fonction_3:hover, .Notice .Fonction_2:hover {
   cursor: pointer;
   background: #e4d5f6;
 }
-.Notice :hover.Fonction_1 i, .Notice :hover.Fonction_1 .Fonction_2:hover i {
+.Notice .Fonction_1:hover i, .Notice .Fonction_3:hover i, .Notice .Fonction_2:hover i {
   color: #9356DC;
 }
 @media screen and (max-width: 980px) {
@@ -174,13 +152,134 @@ header {
   }
   .Notice h2 {
     display: flex;
-    justify-content: flex-start;
+    align-items: start;
   }
   .Notice .Fonction {
     display: flex;
     width: 500px;
+    height: 40px;
     justify-content: space-around;
   }
+  .Notice .Num1 {
+    position: relative;
+    top: -5px;
+    left: -38px;
+  }
+  .Notice .Num2 {
+    position: relative;
+    top: -5px;
+    left: -38px;
+  }
+  .Notice .Num3 {
+    position: relative;
+    top: -5px;
+    left: -38px;
+  }
+}
+
+.Restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+  background: #f3f3f3;
+  width: 100%;
+}
+.Restaurants a {
+  text-decoration: none;
+}
+.Restaurants h2 {
+  margin-left: 30px;
+  font-size: 2rem;
+}
+.Restaurants .Restos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Restaurants img {
+  width: 550px;
+  height: 400px;
+  margin: 50px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px #d9d9d9;
+}
+.Restaurants .Nouveau {
+  position: relative;
+  display: flex;
+  left: 470px;
+  bottom: 430px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  z-index: 2;
+  background: #99E2D0;
+  border-radius: 3px;
+  margin-bottom: -35px;
+}
+.Restaurants .Nouveau p {
+  color: #2c9c81;
+  font-weight: bold;
+}
+.Restaurants .Description {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 84.8%;
+  background: #fff;
+  bottom: 135px;
+  left: 49px;
+  border-radius: 0 0 10px 10px;
+  color: #000;
+}
+.Restaurants .Description p {
+  margin: 18px;
+  font-size: 1.2rem;
+}
+.Restaurants .Description .fa-heart {
+  font-size: 1.5rem;
+  margin: 20px;
+  left: 50px;
+}
+
+.BasPage {
+  background: #383838;
+  margin: auto;
+  padding: 15px;
+}
+.BasPage .logo {
+  color: #fff;
+  width: 250px;
+  margin: 10px;
+  margin-left: 40px;
+}
+.BasPage ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media screen and (max-width: 980px) {
+  .BasPage ul {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+}
+.BasPage ul li {
+  list-style-type: none;
+  margin: 10px;
+  color: #fff;
+}
+.BasPage ul i {
+  margin-right: 10px;
+}
+.BasPage ul a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

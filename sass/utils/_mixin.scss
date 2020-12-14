@@ -16,11 +16,16 @@
     font-family: 'shrinkhand', serif;
 }
 
-@mixin R_descritpion {
-    position: absolute;
+@mixin R_description {
+    display: flex;
+    position: relative;
+    z-index: 2;
     border-radius: 0% 0% 10px 10px;
     background-color: #fff;
-    height: 20%;
+    height: 10%;
+    width: auto;
+    bottom: 100px;
+
 }
 
 @mixin Boutton{
@@ -38,4 +43,10 @@
     }
 }    
 
-
+@mixin Fonction{
+    cursor: pointer;
+            background: lighten($cd_primary, $amount: 30);
+            & i{
+                    color: $cd_primary;
+                }
+}

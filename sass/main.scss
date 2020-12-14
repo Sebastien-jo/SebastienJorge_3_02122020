@@ -1,11 +1,16 @@
-@import './base/polices';
+
 @import './utils/variables';
 @import './utils/mixin';
 @import './utils/maps';
 
 .Bloc_page{
-    width: 1900px;
+    width: 1920px;
     margin: auto;
+    
+}
+
+body{
+    font-family: 'Roboto';
 }
 
 header{
@@ -13,7 +18,7 @@ header{
     margin: 30px;
     @include mobile_only{
         position: relative;
-        width: 102%;
+        width: 100%;
         margin: auto;
         text-align: center;
         box-shadow: 0px 8px 3px -3px darken($cd_form, 10) ;
@@ -59,7 +64,6 @@ header{
 .Presentation{
     margin-left: 30px;
     font-size: 1.2rem;
-    font-family: "robotoregular";
 
     @include mobile_only{
         text-align: center;
@@ -113,27 +117,28 @@ header{
                border-radius: 40px;
                height: 20px;
                width: 20px;
-
-               &.Num1{
-                   top: 81px;
-               }
-               &.Num2{
-                   top: 154px;
-               }
-               &.Num3{
-                   top: 225px;
-               }
            }
         }
-        & :hover.Fonction_1{
-            cursor: pointer;
-            background: lighten($cd_primary, $amount: 30);
-            .Fonction_2{
-                @extend .Fonction_1;
-            }
-                & i{
-                    color: $cd_primary;
-                }
+    
+               .Num1{
+                   top: 81px;
+               }
+               .Num2{
+                   top: 154px;
+               }
+               .Num3{
+                   top: 225px;
+               }
+           
+        
+        .Fonction_1:hover{
+           @include Fonction;
+        }
+        .Fonction_2{
+            @extend .Fonction_1;
+        }
+        .Fonction_3{
+            @extend .Fonction_1;
         }
 
         @include mobile_only{
@@ -146,16 +151,150 @@ header{
             
             & h2{
                 display: flex;
-                justify-content: flex-start;
+                align-items: start;
             }
             & .Fonction{
                 display: flex;
                 width:500px;
+                height: 40px;
                 justify-content: space-around;
                 
             }
+            .Num1{
+                position: relative;
+                top: -5px;
+                left: -38px;
+            }
+            .Num2{
+                position: relative;
+                top: -5px;
+                left: -38px;
+            }
+            .Num3{
+                position: relative;
+                top: -5px;
+                left: -38px;
+            }
+            
+        
         }
 }
-    
+
+.Restaurants{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    background: lighten($cd_form, 5);
+    width: 100%;
+
+        & a{
+            text-decoration: none;
+        }
+
+        & h2{
+            margin-left: 30px;
+            font-size: 2rem;
+        }
+
+        & .Restos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        & img{
+            width: 550px;
+            height: 400px;
+            margin: 50px;
+            z-index: 1;
+            border-radius: 10px;
+            box-shadow: $b_shadow;
+        }
+        & .Nouveau{
+            position: relative;
+            display: flex;
+            left: 470px;
+            bottom: 430px;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 35px;
+            z-index: 2;
+            background: $cd_tertiary;
+            border-radius: 3px;
+            margin-bottom: -35px;
+                & p{
+                    color: darken($cd_tertiary, 35);
+                    font-weight: bold;
+                }
+        }
+        & .Description{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 84.8%;
+            background: #fff;
+            bottom: 135px;
+            left: 49px;
+            border-radius: 0 0 10px 10px;
+            color: #000;
+                
+                & p{
+                    margin: 18px;
+                    font-size: 1.2rem;
+                }
+
+                & .fa-heart{
+                    font-size: 1.5rem;
+                    margin: 20px;
+                    left: 50px;
+                }
+        }
+ 
+}
+
+.BasPage{
+    background: rgb(56, 56, 56);
+    margin: auto;
+    padding: 15px;
+
+        & .logo{
+            color: #fff;
+            width: 250px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+
+        & ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            @include mobile_only{
+                flex-direction: column;
+                align-self: flex-start;
+            }
+
+            & li{
+               list-style-type: none;
+               margin: 10px;
+               color: #fff;
+            }
+
+            & i{
+                margin-right: 10px;
+            }
+
+            & a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }        
+}
+
 
     
