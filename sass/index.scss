@@ -297,4 +297,183 @@ header{
 }
 
 
+.Bloc_page_2{
+    @extend .Bloc_page;
+    background: $cd_form;
+    @include mobile_only{
+        background: none;
+        width: auto;
+    }
+}
+
+.ALFh{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #fff;
+    margin: auto;
+    padding: 15px;
+
+    & .logoEnTete_2{
+        margin-right: 800px;
+    }
+
+    & .fa-arrow-left{
+        margin-top: 20px;
+        margin-left: 20px;
+        color: #000;
+        font-size: 1.5rem;
+    }
     
+    @include mobile_only{
+        width: auto;
+        margin: 0px;
+        margin-bottom: -50px;
+        box-shadow: none;
+        background:none;
+
+            & .logoEnTete_2{
+              margin: auto;
+              height: auto;
+            }
+
+            & .fa-arrow-left{
+                margin-top: 40px;
+            }
+
+    }
+
+}
+
+.Photo1{
+    position: relative;
+    top: 50px;
+    z-index: -1;
+
+
+        & img{
+            width: 830px;
+            max-height: 450px;
+            margin-left: 120px;
+            margin-top: 50px;
+            border-radius: 25px 25px 0 0;
+
+            @include mobile_only{
+                width: 100%;
+                margin: 0px;
+                border-radius: 0;
+            }
+        }
+        
+}
+
+.Menu{
+    display: inline-block;
+    width: 800px;
+    background: lighten($cd_form, 6);
+    margin-left: 120px;
+    margin-bottom: 30px;
+    z-index: 1;
+    padding: 15px;
+    border-radius: 25px;
+    
+        & .NomResto{
+            font-family: "shrikhand";
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 10px;
+            align-items: center;
+        }
+
+        & .BlocMenu{
+           display: flex;
+           flex-direction: column;
+           background: #fff;
+           margin: 20px;
+           padding: 5px;
+           height: 50px;
+           border-radius: 20px;
+           box-shadow: $b_shadow;
+
+           & .prix{
+                text-align: right;
+                margin-top: -25px;
+           }
+
+           & h4{
+               margin: 4px;
+           }
+
+           & p{
+               margin: 4px;
+           }
+        }
+
+        & button{
+            @include Boutton;
+            margin: 25px;
+            margin-left: 280px;
+
+            @include mobile_only{
+                position: relative;
+                justify-content: center;
+            }
+        }
+
+        & h3{
+            font-weight: normal;
+            padding-bottom: 5px;
+            border-bottom: 4px solid $cd_tertiary;
+            width: 40px;  
+
+        }
+
+        @include mobile_only{
+            margin: 0px;
+            width: 96.5%;
+            border-radius: 35px 35px 0 0;
+        }
+} 
+
+
+
+aside{
+    position: relative;
+    float: right;
+    margin-top: -400px;
+    margin-right: 120px;
+    background: lighten($cd_form, 6);
+    border-radius: 25px;
+    border: 3px solid darken($cd_form, 8);
+
+    & h3{
+        font-size: 1.5rem;
+        margin: 20px;
+    }
+
+    & .autresResto{
+    @extend .Restaurants;
+    background: none;
+    margin-top: 0;
+
+        & img{
+            width: 300px;
+            height: 200px;
+        }
+
+        & .Description{
+            width: 75.3%;
+            bottom: 125px;
+            & p{
+                font-size: 0.9rem;
+            }
+
+        }
+    }
+
+    @include mobile_only{
+        display: none;
+    }
+}
