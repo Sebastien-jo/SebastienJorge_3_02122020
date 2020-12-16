@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/index.scss:./public/style.css --style expanded"
+    "sass": "sass --watch ./sass/index.scss:./public/style.css --style expanded",
+    "sass2": "sass --watch ./sass/ALaFrancaise.scss:./public/ALaFrancaise.css --style expanded",
+    "sass3": "sass --watch ./sass/LaNoteEnchantee.scss:./public/LaNoteEnchantee.css --style expanded",
+    "sass4": "sass --watch ./sass/LaPaletteDuGout.scss:./public/LaPaletteDuGout.css --style expanded",
+    "sass5": "sass --watch ./sass/LeDeliceDesSens.scss:./public/LeDeliceDesSens.css --style expanded"
   },
   "author": "",
   "license": "ISC"
