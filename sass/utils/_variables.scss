@@ -2,6 +2,7 @@ $cd_primary: #9356DC;
 $cd_secondary: #FF79DA;
 $cd_tertiary:#99E2D0;
 $cd_form: rgb(230, 230, 230);
+$cd_degrade: linear-gradient(to bottom right, $cd_secondary, $cd_primary);
 $p_size: .55rem;
 $menu_size: .80rem;
 $b_shadow:  2px 2px 5px 2px darken($cd_form, 7);

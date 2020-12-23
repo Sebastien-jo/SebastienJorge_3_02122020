@@ -4,13 +4,16 @@
 @import './utils/maps';
 
 .Bloc_page{
-    width: auto;
     margin: auto;
+    width: 100%;
+    
     
 }
 
 body{
     font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
 }
 
 header{

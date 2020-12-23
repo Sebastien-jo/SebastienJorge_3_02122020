@@ -176,7 +176,7 @@ aside{
     @include Bloc_Restaurants;
     background: none;
     margin-top: 0;
-
+    display: contents;
         & img{
             width: 300px;
             height: 200px;
@@ -201,5 +201,30 @@ aside{
 
 .BasPage{
     @include Footers
+}
+
+/* Animations*/
+.Entrees{
+    & .BlocMenu{
+        opacity: 0;
+        animation: Anim_menu 1.5s ;
+        transform-origin: 100% 0%;
+        animation-delay: 250ms;
+        animation-fill-mode: both;
+    }
+    & .BlocMenu2{
+        animation-delay: 350ms;
+    }
+    & .BlocMenu3{
+        animation-delay: 450ms;
+    }
+}
+
+.Plats{
+    @extend .Entrees
+}
+
+.Desserts{
+    @extend .Entrees
 }
 

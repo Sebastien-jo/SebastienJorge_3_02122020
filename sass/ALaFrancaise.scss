@@ -100,6 +100,14 @@ body{
             margin: 10px;
             align-items: center;
         }
+        & .Coeur{
+           padding: 0;
+           border: none;
+           background: none;
+          & .fa-heart{
+              font-size: 1.5rem;
+          }
+        }
 
         & .BlocMenu{
            display: flex;
@@ -110,10 +118,26 @@ body{
            height: 50px;
            border-radius: 20px;
            box-shadow: $b_shadow;
-
+           &:hover{
+               cursor: pointer;
+               & .Coche{
+                   display: flex;
+                   animation: Selection .8s;
+                   overflow: hidden;
+                   transform-origin: right;
+                   & .fa-check-circle{
+                       animation: Encoche .8s;
+                   }
+                }
+            }
            & .prix{
-                text-align: right;
-                margin-top: -25px;
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                margin-right: 5px;
+                &:hover{
+                    animation: Selection;
+                }
            }
 
            & h4{
@@ -131,7 +155,11 @@ body{
             @include Boutton;
             border: 0;
             margin: 25px;
-            padding: 10px;
+            padding: 10px;  
+
+            &:hover{
+                transition-duration: 350ms;
+            }
 
             & a{
                 padding: 10px 30px 10px 30px;
@@ -176,7 +204,7 @@ aside{
     @include Bloc_Restaurants;
     background: none;
     margin-top: 0;
-
+    display: contents;
         & img{
             width: 300px;
             height: 200px;
@@ -202,4 +230,42 @@ aside{
 .BasPage{
     @include Footers
 }
+/* Animations*/
+.Entrees{
+    & .BlocMenu{
+        opacity: 0;
+        animation: Anim_menu 1.5s ;
+        transform-origin: 100% 0%;
+        animation-delay: 250ms;
+        animation-fill-mode: both;
+    }
+    & .BlocMenu2{
+        animation-delay: 350ms;
+    }
+    & .BlocMenu3{
+        animation-delay: 450ms;
+    }
+}
 
+.Plats{
+    @extend .Entrees
+}
+
+.Desserts{
+    @extend .Entrees
+}
+
+.Coche{
+        background: $cd_tertiary;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    display: none;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    right: 0;
+    top: 0;
+    border-radius: 0 20px 20px 0;
+}

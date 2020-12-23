@@ -170,9 +170,11 @@ aside .autresResto {
   width: 100%;
   background: none;
   margin-top: 0;
+  display: contents;
 }
 aside .autresResto a {
   text-decoration: none;
+  display: contents;
 }
 aside .autresResto h2 {
   margin-left: 30px;
@@ -230,6 +232,15 @@ aside .autresResto .Description .fa-heart {
   font-size: 1.5rem;
   margin: 20px;
   left: 50px;
+  background: #fff;
+}
+aside .autresResto .Description .fa-heart .heart_cl {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 0;
+}
+aside .autresResto .Description .fa-heart .heart_cl:hover {
+  opacity: 1;
+  transition: opacity 250ms;
 }
 aside .autresResto img {
   width: 300px;

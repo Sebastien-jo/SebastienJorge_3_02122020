@@ -1,10 +1,30 @@
+@keyframes Anim_menu {
+  0% {
+    transform: translatey(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+@keyframes Selection {
+  0% {
+    transform: translateX(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .Bloc_page {
-  width: auto;
   margin: auto;
+  width: 100%;
 }
 
 body {
   font-family: "Roboto";
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -188,6 +208,7 @@ header {
 }
 .Restaurants a {
   text-decoration: none;
+  display: contents;
 }
 .Restaurants h2 {
   margin-left: 30px;
@@ -244,7 +265,14 @@ header {
 .Restaurants .Description .fa-heart {
   font-size: 1.5rem;
   margin: 20px;
-  left: 50px;
+}
+.Restaurants .Description .fa-heart .heart_cl {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 0;
+}
+.Restaurants .Description .fa-heart .heart_cl:hover {
+  opacity: 1;
+  transition: opacity 250ms;
 }
 
 .BasPage {

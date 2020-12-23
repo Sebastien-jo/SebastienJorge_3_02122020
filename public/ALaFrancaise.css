@@ -1,3 +1,45 @@
+@keyframes Anim_menu {
+  0% {
+    transform: translatey(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+@keyframes Selection {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  100% {
+    width: 70px;
+  }
+}
+@keyframes SelectionOut {
+  0% {
+    width: 70px;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+@keyframes Encoche {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
 body {
   font-family: "roboto";
 }
@@ -91,6 +133,14 @@ body {
   margin: 10px;
   align-items: center;
 }
+.Menu .Coeur {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.Menu .Coeur .fa-heart {
+  font-size: 1.5rem;
+}
 .Menu .BlocMenu {
   display: flex;
   flex-direction: column;
@@ -101,9 +151,26 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
 }
+.Menu .BlocMenu:hover {
+  cursor: pointer;
+}
+.Menu .BlocMenu:hover .Coche {
+  display: flex;
+  animation: Selection 0.8s;
+  overflow: hidden;
+  transform-origin: right;
+}
+.Menu .BlocMenu:hover .Coche .fa-check-circle {
+  animation: Encoche 0.8s;
+}
 .Menu .BlocMenu .prix {
-  text-align: right;
-  margin-top: -25px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  margin-right: 5px;
+}
+.Menu .BlocMenu .prix:hover {
+  animation: Selection;
 }
 .Menu .BlocMenu h4 {
   margin: 4px;
@@ -130,6 +197,13 @@ body {
   color: #fff;
   font-size: 1.5rem;
   padding: 30px;
+}
+.Menu .Btn Button:hover {
+  opacity: 0.9;
+  box-shadow: 3px 3px 4px 3px #c7c7c7;
+}
+.Menu .Btn Button:hover {
+  transition-duration: 350ms;
 }
 .Menu .Btn Button a {
   padding: 10px 30px 10px 30px;
@@ -170,9 +244,11 @@ aside .autresResto {
   width: 100%;
   background: none;
   margin-top: 0;
+  display: contents;
 }
 aside .autresResto a {
   text-decoration: none;
+  display: contents;
 }
 aside .autresResto h2 {
   margin-left: 30px;
@@ -229,7 +305,14 @@ aside .autresResto .Description p {
 aside .autresResto .Description .fa-heart {
   font-size: 1.5rem;
   margin: 20px;
-  left: 50px;
+}
+aside .autresResto .Description .fa-heart .heart_cl {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 0;
+}
+aside .autresResto .Description .fa-heart .heart_cl:hover {
+  opacity: 1;
+  transition: opacity 250ms;
 }
 aside .autresResto img {
   width: 300px;
@@ -282,6 +365,36 @@ aside .autresResto .Description p {
 .BasPage ul a {
   text-decoration: none;
   color: #fff;
+}
+
+/* Animations*/
+.Entrees .BlocMenu, .Desserts .BlocMenu, .Plats .BlocMenu {
+  opacity: 0;
+  animation: Anim_menu 1.5s;
+  transform-origin: 100% 0%;
+  animation-delay: 250ms;
+  animation-fill-mode: both;
+}
+.Entrees .BlocMenu2, .Desserts .BlocMenu2, .Plats .BlocMenu2 {
+  animation-delay: 350ms;
+}
+.Entrees .BlocMenu3, .Desserts .BlocMenu3, .Plats .BlocMenu3 {
+  animation-delay: 450ms;
+}
+
+.Coche {
+  background: #99E2D0;
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  display: none;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  right: 0;
+  top: 0;
+  border-radius: 0 20px 20px 0;
 }
 
 /*# sourceMappingURL=ALaFrancaise.css.map */

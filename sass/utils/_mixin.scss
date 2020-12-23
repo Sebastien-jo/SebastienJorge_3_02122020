@@ -41,6 +41,10 @@
         font-size: 1.5rem;
         padding: 30px;
     }
+    &:hover{
+        opacity: .9;
+        box-shadow: 3px 3px 4px 3px darken($cd_form, 12);
+    }
 }    
 
 @mixin Fonction{
@@ -60,9 +64,11 @@
     margin-top: 30px;
     background: lighten($cd_form, 5);
     width: 100%;
+        
 
         & a{
             text-decoration: none;
+            display: contents;
         }
 
         & h2{
@@ -123,8 +129,20 @@
                 & .fa-heart{
                     font-size: 1.5rem;
                     margin: 20px;
-                    left: 50px;
+
+                    & .heart_cl{
+                        background: linear-gradient(to bottom right, $cd_secondary, $cd_primary);
+                        opacity: 0;
+
+                        &:hover{
+                            opacity: 1;
+                            transition: opacity 250ms;
+                        }
+                    }
+
+                        
                 }
+
         }
  
 }
@@ -167,4 +185,58 @@
                 color: #fff;
             }
         }   
+}
+
+@keyframes Anim_menu{
+    0%{
+        transform: translatey(10px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translatey(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes Selection{
+    
+    0%{
+        width: 0;
+        opacity: 0;
+        
+    }
+    
+    25%{
+        opacity: .9;
+    }
+
+    100%{
+        width: 70px;
+    }
+}
+
+@keyframes SelectionOut{
+    0%{
+        width: 70px;
+    }
+
+    75%{
+        opacity: .9;
+    }
+
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes Encoche{
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
 }
