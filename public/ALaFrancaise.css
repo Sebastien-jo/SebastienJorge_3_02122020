@@ -24,8 +24,8 @@
   0% {
     width: 70px;
   }
-  75% {
-    opacity: 0.9;
+  25% {
+    opacity: 0.7;
   }
   100% {
     width: 0;
@@ -38,6 +38,38 @@
   }
   100% {
     rotate: 360deg;
+  }
+}
+@keyframes EncocheOut {
+  0% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes prixSelect {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes prixSelectOut {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes Like {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 body {
@@ -135,11 +167,31 @@ body {
 }
 .Menu .Coeur {
   padding: 0;
-  border: none;
-  background: none;
 }
-.Menu .Coeur .fa-heart {
+.Menu .Coeur .like {
   font-size: 1.5rem;
+  text-decoration: none;
+}
+.Menu .Coeur .like .far {
+  color: #000;
+}
+.Menu .Coeur .like .far:hover {
+  opacity: 0;
+}
+.Menu .Coeur .like .fas {
+  opacity: 0;
+  font-size: 1.7rem;
+  position: absolute;
+  bottom: 9.8%;
+  left: 32.4%;
+  color: transparent;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-clip: text;
+}
+.Menu .Coeur .like .fas:hover {
+  opacity: 1;
+  animation: Like 250ms;
+  transform-origin: center;
 }
 .Menu .BlocMenu {
   display: flex;
@@ -156,21 +208,22 @@ body {
 }
 .Menu .BlocMenu:hover .Coche {
   display: flex;
-  animation: Selection 0.8s;
+  animation: Selection 0.8s both;
   overflow: hidden;
   transform-origin: right;
 }
 .Menu .BlocMenu:hover .Coche .fa-check-circle {
   animation: Encoche 0.8s;
 }
+.Menu .BlocMenu:hover .prix {
+  animation: prixSelect 0.8s both;
+}
 .Menu .BlocMenu .prix {
   position: absolute;
   right: 5%;
   top: 50%;
   margin-right: 5px;
-}
-.Menu .BlocMenu .prix:hover {
-  animation: Selection;
+  animation: prixSelectOut 0.6s both;
 }
 .Menu .BlocMenu h4 {
   margin: 4px;
@@ -387,7 +440,9 @@ aside .autresResto .Description p {
   position: absolute;
   width: 70px;
   height: 100%;
-  display: none;
+  animation: SelectionOut 0.6s both;
+  display: flex;
+  overflow: hidden;
   font-size: 1.5rem;
   justify-content: center;
   align-items: center;
@@ -395,6 +450,10 @@ aside .autresResto .Description p {
   right: 0;
   top: 0;
   border-radius: 0 20px 20px 0;
+}
+
+.fa-check-circle {
+  animation: EncocheOut 0.6s both;
 }
 
 /*# sourceMappingURL=ALaFrancaise.css.map */

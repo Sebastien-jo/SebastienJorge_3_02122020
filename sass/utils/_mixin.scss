@@ -220,16 +220,15 @@
     0%{
         width: 70px;
     }
-
-    75%{
-        opacity: .9;
+    25%{
+        opacity: .7;
     }
-
     100%{
         width: 0;
         opacity: 0;
     }
 }
+
 
 @keyframes Encoche{
     0%{
@@ -238,5 +237,41 @@
 
     100%{
         rotate: 360deg;
+    }
+}
+
+@keyframes EncocheOut{
+    0%{
+        rotate: 360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes prixSelect{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50px);
+    }
+}
+@keyframes prixSelectOut{
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes Like{
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
     }
 }

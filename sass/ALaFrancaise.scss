@@ -90,7 +90,6 @@ body{
     z-index: 1;
     padding: 15px;
     border-radius: 25px;
-    
         & .NomResto{
             font-family: "shrikhand";
             font-size: 1.5rem;
@@ -102,11 +101,34 @@ body{
         }
         & .Coeur{
            padding: 0;
-           border: none;
-           background: none;
-          & .fa-heart{
+          & .like{
               font-size: 1.5rem;
+              text-decoration: none;
+              & .far{
+                  color: #000;
+                  &:hover{
+                      opacity: 0;
+                  }
+                  
+              }
+              & .fas{
+                  opacity: 0;
+                  font-size: 1.7rem;
+                  position: absolute;
+                  bottom: 9.8%;
+                  left: 32.4%;
+                  color: transparent;
+                  background: linear-gradient(to bottom right, $cd_secondary, $cd_primary);
+                  background-clip: text;
+                  &:hover{
+                      opacity: 1;
+                      animation: Like 250ms;
+                      transform-origin: center;
+                  }
+              }
           }
+         
+
         }
 
         & .BlocMenu{
@@ -122,12 +144,16 @@ body{
                cursor: pointer;
                & .Coche{
                    display: flex;
-                   animation: Selection .8s;
+                   animation: Selection .8s both;
                    overflow: hidden;
                    transform-origin: right;
                    & .fa-check-circle{
                        animation: Encoche .8s;
                    }
+                }
+                & .prix{
+                    animation: prixSelect .8s both;
+                    
                 }
             }
            & .prix{
@@ -135,9 +161,7 @@ body{
                 right: 5%;
                 top: 50%;
                 margin-right: 5px;
-                &:hover{
-                    animation: Selection;
-                }
+                animation: prixSelectOut .6s both;
            }
 
            & h4{
@@ -260,7 +284,9 @@ aside{
     position: absolute;
     width: 70px;
     height: 100%;
-    display: none;
+    animation: SelectionOut .6s both;
+    display: flex;
+    overflow: hidden;
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -268,4 +294,8 @@ aside{
     right: 0;
     top: 0;
     border-radius: 0 20px 20px 0;
+}
+
+.fa-check-circle{
+    animation: EncocheOut .6s both;
 }
