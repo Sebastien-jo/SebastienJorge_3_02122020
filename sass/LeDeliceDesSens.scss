@@ -101,6 +101,37 @@ body{
             align-items: center;
         }
 
+        & .Coeur{
+           position: relative;
+           height: 24px;
+           width: 24px;
+           cursor: pointer;
+                &:hover{
+                    & .fas{
+                    opacity: 1;
+                    animation: Like 350ms both ease-in-out;
+                    transform-origin: center;                    
+                    background: $cd_degrade;
+                    background-clip: text;
+                    }
+                    & .far{
+                        opacity: 0;
+                        transition-duration: 250ms;
+                    }
+                }
+            & .fas{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                color: transparent;
+            }
+            & .far{
+                position: absolute;
+                background: none;
+            }
+        }
+
         & .BlocMenu{
            display: flex;
            flex-direction: column;
@@ -110,10 +141,29 @@ body{
            height: 50px;
            border-radius: 20px;
            box-shadow: $b_shadow;
+            &:hover{
+               cursor: pointer;
+               & .Coche{
+                   display: flex;
+                   animation: Selection .8s both;
+                   overflow: hidden;
+                   transform-origin: right;
+                   & .fa-check-circle{
+                       animation: Encoche .8s;
+                   }
+                }
+                & .prix{
+                    animation: prixSelect .8s both;
+                    
+                }
+            }
 
            & .prix{
-                text-align: right;
-                margin-top: -25px;
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                margin-right: 5px;
+                animation: prixSelectOut .6s both;
            }
 
            & h4{
@@ -132,6 +182,10 @@ body{
             border: 0;
             margin: 25px;
             padding: 10px;
+
+            &:hover{
+                transition-duration: 350ms;
+            }
 
             & a{
                 padding: 10px 30px 10px 30px;
@@ -226,6 +280,27 @@ aside{
 
 .Desserts{
     @extend .Entrees
+}
+
+.Coche{
+        background: $cd_tertiary;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    animation: SelectionOut .6s both;
+    display: flex;
+    overflow: hidden;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    right: 0;
+    top: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.fa-check-circle{
+    animation: EncocheOut .6s both;
 }
 
 
