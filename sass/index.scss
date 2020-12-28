@@ -36,7 +36,7 @@ body{
      animation-delay: 2.5s;
      
      & .fa-spinner{
-         margin-top: -950px;
+         margin-top: -700px;
          font-size: 10rem;
          animation: spinning 2s infinite ;
      }
@@ -131,6 +131,9 @@ header{
            border-radius: 20px;
            box-shadow: $b_shadow;
            list-style-type: none;
+            @include mobile_only{
+                margin-left: 150px;
+            }
            
            >i{
                margin-right: 15px;

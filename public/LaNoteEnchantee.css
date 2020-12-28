@@ -229,6 +229,12 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
 }
+@media screen and (max-width: 980px) {
+  .Menu .BlocMenu {
+    font-size: 1.5rem;
+    height: 70px;
+  }
+}
 .Menu .BlocMenu:hover {
   cursor: pointer;
 }
@@ -333,6 +339,11 @@ aside .autresResto h2 {
   margin-left: 30px;
   font-size: 2rem;
 }
+@media screen and (max-width: 980px) {
+  aside .autresResto h2 {
+    font-size: 3rem;
+  }
+}
 aside .autresResto .Restos {
   display: flex;
   flex-direction: row;
@@ -346,6 +357,12 @@ aside .autresResto img {
   z-index: 1;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
+}
+@media screen and (max-width: 980px) {
+  aside .autresResto img {
+    width: 800px;
+    height: 550px;
+  }
 }
 aside .autresResto .Nouveau {
   position: relative;
@@ -361,6 +378,12 @@ aside .autresResto .Nouveau {
   border-radius: 3px;
   margin-bottom: -35px;
 }
+@media screen and (max-width: 980px) {
+  aside .autresResto .Nouveau {
+    left: 700px;
+    bottom: 550px;
+  }
+}
 aside .autresResto .Nouveau p {
   color: #2c9c81;
   font-weight: bold;
@@ -372,14 +395,29 @@ aside .autresResto .Description {
   flex-direction: row;
   width: 84.8%;
   background: #fff;
-  bottom: 135px;
+  bottom: 139px;
   left: 49px;
   border-radius: 0 0 10px 10px;
   color: #000;
 }
+@media screen and (max-width: 980px) {
+  aside .autresResto .Description {
+    width: 89%;
+    bottom: 155px;
+  }
+}
 aside .autresResto .Description p {
   margin: 18px;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 980px) {
+  aside .autresResto .Description p {
+    font-size: 1.7rem;
+  }
+}
+aside .autresResto .Description p .nomGras {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 aside .autresResto .Description .Coeur {
   position: relative;
@@ -421,6 +459,9 @@ aside .autresResto .Description {
 }
 aside .autresResto .Description p {
   font-size: 0.9rem;
+}
+aside .autresResto .Description p .nomGras {
+  font-size: 1rem;
 }
 @media screen and (max-width: 1220px) {
   aside {

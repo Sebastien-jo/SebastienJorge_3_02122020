@@ -142,6 +142,10 @@ body{
            height: 50px;
            border-radius: 20px;
            box-shadow: $b_shadow;
+           @include mobile_only{
+                font-size: 1.5rem;
+                height: 70px;
+            }
            &:hover{
                cursor: pointer;
                & .Coche{
@@ -241,7 +245,12 @@ aside{
             bottom: 125px;
             & p{
                 font-size: 0.9rem;
+
+                 & .nomGras{
+                font-size: 1rem;
             }
+            }
+           
 
         }
     }

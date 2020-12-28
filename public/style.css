@@ -130,7 +130,7 @@ body {
   animation-delay: 2.5s;
 }
 .loader .fa-spinner {
-  margin-top: -950px;
+  margin-top: -700px;
   font-size: 10rem;
   animation: spinning 2s infinite;
 }
@@ -156,7 +156,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 250px;
+  width: 200px;
   margin-left: 30px;
   background: #e6e6e6;
   border-radius: 20px;
@@ -241,6 +241,11 @@ header {
   border-radius: 20px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
   list-style-type: none;
+}
+@media screen and (max-width: 980px) {
+  .Notice li {
+    margin-left: 150px;
+  }
 }
 .Notice li > i {
   margin-right: 15px;
@@ -329,6 +334,11 @@ header {
   margin-left: 30px;
   font-size: 2rem;
 }
+@media screen and (max-width: 980px) {
+  .Restaurants h2 {
+    font-size: 3rem;
+  }
+}
 .Restaurants .Restos {
   display: flex;
   flex-direction: row;
@@ -342,6 +352,12 @@ header {
   z-index: 1;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants img {
+    width: 800px;
+    height: 550px;
+  }
 }
 .Restaurants .Nouveau {
   position: relative;
@@ -357,6 +373,12 @@ header {
   border-radius: 3px;
   margin-bottom: -35px;
 }
+@media screen and (max-width: 980px) {
+  .Restaurants .Nouveau {
+    left: 700px;
+    bottom: 550px;
+  }
+}
 .Restaurants .Nouveau p {
   color: #2c9c81;
   font-weight: bold;
@@ -368,14 +390,29 @@ header {
   flex-direction: row;
   width: 84.8%;
   background: #fff;
-  bottom: 135px;
+  bottom: 139px;
   left: 49px;
   border-radius: 0 0 10px 10px;
   color: #000;
 }
+@media screen and (max-width: 980px) {
+  .Restaurants .Description {
+    width: 89%;
+    bottom: 155px;
+  }
+}
 .Restaurants .Description p {
   margin: 18px;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants .Description p {
+    font-size: 1.7rem;
+  }
+}
+.Restaurants .Description p .nomGras {
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 .Restaurants .Description .Coeur {
   position: relative;

@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin small-screen{
+    @media screen and(max-width: 720px){
+        @content
+    }
+}
 
 
 @mixin text_menu ($size: $p_size){
@@ -74,6 +79,9 @@
         & h2{
             margin-left: 30px;
             font-size: 2rem;
+            @include mobile_only{
+                font-size: 3rem;
+            }
         }
 
         & .Restos{
@@ -90,6 +98,11 @@
             z-index: 1;
             border-radius: 10px;
             box-shadow: $b_shadow;
+
+                @include mobile_only{
+                    width: 800px;
+                    height: 550px;
+                }
         }
         & .Nouveau{
             position: relative;
@@ -104,6 +117,10 @@
             background: $cd_tertiary;
             border-radius: 3px;
             margin-bottom: -35px;
+                @include mobile_only{
+                    left: 700px;
+                    bottom: 550px;
+                }
                 & p{
                     color: darken($cd_tertiary, 35);
                     font-weight: bold;
@@ -116,14 +133,26 @@
             flex-direction: row;
             width: 84.8%;
             background: #fff;
-            bottom: 135px;
+            bottom: 139px;
             left: 49px;
             border-radius: 0 0 10px 10px;
             color: #000;
+                @include mobile_only{
+                    width: 89%;
+                    bottom: 155px;
+                }
                 
                 & p{
                     margin: 18px;
                     font-size: 1.2rem;
+
+                    @include mobile_only{
+                        font-size: 1.7rem;
+                    }
+                    & .nomGras{
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
                 }
 
                 & .Coeur{

@@ -140,6 +140,10 @@ body{
            height: 50px;
            border-radius: 20px;
            box-shadow: $b_shadow;
+           @include mobile_only{
+                font-size: 1.5rem;
+                height: 70px;
+            }
             &:hover{
                cursor: pointer;
                & .Coche{
@@ -155,6 +159,10 @@ body{
                     animation: prixSelect .8s both;
                     
                 }
+            }
+            & .ennonce{
+                width: 300px;
+                text-overflow: ellipsis;
             }
 
            & .prix{
@@ -240,7 +248,12 @@ aside{
             bottom: 125px;
             & p{
                 font-size: 0.9rem;
+
+                & .nomGras{
+                font-size: 1rem;
             }
+            }
+            
 
         }
     }

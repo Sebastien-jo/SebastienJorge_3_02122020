@@ -141,6 +141,11 @@ body{
            height: 50px;
            border-radius: 20px;
            box-shadow: $b_shadow;
+           text-overflow: ellipsis;
+            @include mobile_only{
+                font-size: 1.5rem;
+                height: 70px;
+            }
             &:hover{
                cursor: pointer;
                & .Coche{
@@ -163,16 +168,30 @@ body{
                 right: 5%;
                 top: 50%;
                 margin-right: 5px;
+                padding-left: 10px;
                 animation: prixSelectOut .6s both;
            }
+           & .ennonce{
+               width: 450px;
+           }   
+            
 
            & h4{
+               width: fit-content;
                margin: 4px;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
            }
 
            & p{
+               width: fit-content;
                margin: 4px;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
            }
+            
         }
         & .Btn{
             display: flex;
@@ -241,6 +260,9 @@ aside{
             bottom: 125px;
             & p{
                 font-size: 0.9rem;
+                & .nomGras{
+                font-size: 1rem;
+            }
             }
 
         }
