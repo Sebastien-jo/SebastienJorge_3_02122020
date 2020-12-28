@@ -109,7 +109,10 @@ header{
 }
 
 .Bouton_titre{
-    @include Boutton    
+    @include Boutton;
+        &:hover{
+            transition-duration: 350ms;
+        }    
 }
 
 .Notice{
