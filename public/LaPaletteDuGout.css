@@ -34,18 +34,18 @@
 }
 @keyframes Encoche {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @keyframes EncocheOut {
   0% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
   100% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
 }
 @keyframes prixSelect {
@@ -75,17 +75,17 @@
 @keyframes spinning {
   0% {
     color: #FF79DA;
-    rotate: 0deg;
+    transform: rotate(0deg);
     scale: 1;
   }
   50% {
     color: #99E2D0;
-    rotate: 360deg;
+    transform: rotate(360deg);
     scale: 1.5;
   }
   100% {
     color: #FF79DA;
-    rotate: 720deg;
+    transform: rotate(720deg);
     scale: 1;
   }
 }
