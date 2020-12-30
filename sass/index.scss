@@ -57,6 +57,12 @@ header{
     }
 }
 
+.Localisation{
+    & h2{
+        display: none;
+    }
+}
+
 .BarreRecherche{
     display: flex;
     justify-content: space-between;
@@ -73,6 +79,7 @@ header{
          outline-style: none;
          font-size: 1rem;
      }
+
      @include mobile_only{
          justify-content: center;
          width: 99%;
@@ -216,7 +223,10 @@ header{
 }
 
 .Restaurants{
-    @include Bloc_Restaurants
+    @include Bloc_Restaurants;
+    & .nomGras{
+        font-size: 1rem;
+    }
 }
 
 .BasPage{

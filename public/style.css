@@ -75,18 +75,15 @@
 @keyframes spinning {
   0% {
     color: #FF79DA;
-    transform: rotate(0deg);
-    scale: 1;
+    transform: rotate(0deg) scale(1);
   }
   50% {
     color: #99E2D0;
-    transform: rotate(360deg);
-    scale: 1.5;
+    transform: rotate(360deg) scale(1.5);
   }
   100% {
     color: #FF79DA;
-    transform: rotate(720deg);
-    scale: 1;
+    transform: rotate(720deg) scale(1);
   }
 }
 @keyframes loading {
@@ -150,6 +147,10 @@ header {
   header .logo {
     height: 100px;
   }
+}
+
+.Localisation h2 {
+  display: none;
 }
 
 .BarreRecherche {
@@ -324,7 +325,7 @@ header {
   justify-content: space-around;
   margin-top: 30px;
   background: #f3f3f3;
-  width: 100%;
+  width: 102%;
 }
 .Restaurants a {
   text-decoration: none;
@@ -344,6 +345,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 .Restaurants img {
   width: 550px;
@@ -398,7 +400,7 @@ header {
 @media screen and (max-width: 980px) {
   .Restaurants .Description {
     width: 89%;
-    bottom: 155px;
+    bottom: 156px;
   }
 }
 .Restaurants .Description p {
@@ -412,7 +414,12 @@ header {
 }
 .Restaurants .Description p .nomGras {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants .Description p .nomGras {
+    font-size: 1.9rem;
+  }
 }
 .Restaurants .Description .Coeur {
   position: relative;
@@ -443,6 +450,9 @@ header {
 .Restaurants .Description .Coeur .far {
   position: absolute;
   background: none;
+}
+.Restaurants .nomGras {
+  font-size: 1rem;
 }
 
 .BasPage {

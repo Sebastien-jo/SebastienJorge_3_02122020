@@ -137,7 +137,7 @@ body{
            background: #fff;
            margin: 25px;
            padding: 5px;
-           height: 50px;
+           height: 55px;
            border-radius: 20px;
            box-shadow: $b_shadow;
            @include mobile_only{
@@ -175,16 +175,23 @@ body{
 
            & h4{
                margin: 4px;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+               width: 70%;;
            }
 
            & p{
                margin: 4px;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               overflow: hidden;
+               width: 70%;;
            }
         }
-        & .Btn{
+        & .Bouton-titre{
             display: flex;
             align-self: center;
-        & Button{
             @include Boutton;
             border: 0;
             margin: 25px;
@@ -198,7 +205,7 @@ body{
                 padding: 10px 30px 10px 30px;
             }
         }
-    }
+    
     
 
         & h3{

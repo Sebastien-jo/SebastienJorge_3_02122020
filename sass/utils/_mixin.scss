@@ -68,7 +68,7 @@
     justify-content: space-around;
     margin-top: 30px;
     background: lighten($cd_form, 5);
-    width: 100%;
+    width: 102%;
         
 
         & a{
@@ -89,6 +89,8 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+            align-items: center;
+               
         }
         
         & img{
@@ -139,7 +141,7 @@
             color: #000;
                 @include mobile_only{
                     width: 89%;
-                    bottom: 155px;
+                    bottom: 156px;
                 }
                 
                 & p{
@@ -151,7 +153,10 @@
                     }
                     & .nomGras{
                         font-weight: bold;
-                        font-size: 1.8rem;
+                        font-size: 1.4rem;
+                        @include mobile_only{
+                            font-size: 1.9rem;
+                        }
                     }
                 }
 
@@ -324,20 +329,17 @@
 @keyframes spinning{
     0%{
         color: $cd_secondary;
-        transform: rotate(0deg);
-        scale: 1;
+        transform: rotate(0deg) scale(1);
     }
     50%{
         color: $cd_tertiary;
-        transform: rotate(360deg);
-        scale: 1.5;
+        transform: rotate(360deg) scale(1.5);
     }
    
     100%{
         
         color: $cd_secondary;
-        transform: rotate(720deg);
-        scale: 1;
+        transform: rotate(720deg) scale(1);
     }
 }
 

@@ -75,18 +75,15 @@
 @keyframes spinning {
   0% {
     color: #FF79DA;
-    transform: rotate(0deg);
-    scale: 1;
+    transform: rotate(0deg) scale(1);
   }
   50% {
     color: #99E2D0;
-    transform: rotate(360deg);
-    scale: 1.5;
+    transform: rotate(360deg) scale(1.5);
   }
   100% {
     color: #FF79DA;
-    transform: rotate(720deg);
-    scale: 1;
+    transform: rotate(720deg) scale(1);
   }
 }
 @keyframes loading {
@@ -225,7 +222,7 @@ body {
   background: #fff;
   margin: 25px;
   padding: 5px;
-  height: 50px;
+  height: 55px;
   border-radius: 20px;
   box-shadow: 2px 2px 5px 2px #d4d4d4;
   text-overflow: ellipsis;
@@ -259,26 +256,23 @@ body {
   padding-left: 10px;
   animation: prixSelectOut 0.6s both;
 }
-.Menu .BlocMenu .ennonce {
-  width: 450px;
-}
 .Menu .BlocMenu h4 {
   margin: 4px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 70%;
 }
 .Menu .BlocMenu p {
   margin: 4px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 70%;
 }
-.Menu .Btn {
+.Menu .Bouton-titre {
   display: flex;
   align-self: center;
-}
-.Menu .Btn Button {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   display: inline-block;
   border-radius: 30px;
@@ -288,20 +282,20 @@ body {
   margin: 25px;
   padding: 10px;
 }
-.Menu .Btn Button a {
+.Menu .Bouton-titre a {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
   padding: 30px;
 }
-.Menu .Btn Button:hover {
+.Menu .Bouton-titre:hover {
   opacity: 0.9;
   box-shadow: 3px 3px 4px 3px #c7c7c7;
 }
-.Menu .Btn Button:hover {
+.Menu .Bouton-titre:hover {
   transition-duration: 350ms;
 }
-.Menu .Btn Button a {
+.Menu .Bouton-titre a {
   padding: 10px 30px 10px 30px;
 }
 .Menu h3 {
@@ -428,7 +422,7 @@ aside .autresResto .Description p {
 }
 aside .autresResto .Description p .nomGras {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 aside .autresResto .Description .Coeur {
   position: relative;
