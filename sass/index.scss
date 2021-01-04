@@ -15,6 +15,7 @@ body{
     font-family: 'Roboto';
     padding: 0;
     margin: 0;
+    width: 100%;
 
     @include mobile_only{
         width: 100%;
@@ -83,7 +84,7 @@ header{
 
      @include mobile_only{
          justify-content: center;
-         width: 99%;
+         width: 96.9%;
          border-radius: 0;
          margin: auto;
          font-size: 1.8rem;
@@ -105,7 +106,6 @@ header{
     @include mobile_only{
         text-align: center;
         background: lighten($cd_form, 5);
-        width: 100%;
         margin: 0;
         padding: 10px;
         padding-bottom: 40px;
