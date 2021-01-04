@@ -333,7 +333,7 @@ aside .autresResto {
   justify-content: space-around;
   margin-top: 30px;
   background: #f3f3f3;
-  width: 100%;
+  width: 102%;
   background: none;
   margin-top: 0;
   display: contents;
@@ -356,6 +356,7 @@ aside .autresResto .Restos {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 aside .autresResto img {
   width: 550px;
@@ -410,7 +411,7 @@ aside .autresResto .Description {
 @media screen and (max-width: 980px) {
   aside .autresResto .Description {
     width: 89%;
-    bottom: 155px;
+    bottom: 156px;
   }
 }
 aside .autresResto .Description p {
@@ -425,6 +426,11 @@ aside .autresResto .Description p {
 aside .autresResto .Description p .nomGras {
   font-weight: bold;
   font-size: 1.4rem;
+}
+@media screen and (max-width: 980px) {
+  aside .autresResto .Description p .nomGras {
+    font-size: 1.9rem;
+  }
 }
 aside .autresResto .Description .Coeur {
   position: relative;

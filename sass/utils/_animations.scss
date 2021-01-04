@@ -1,0 +1,117 @@
+@keyframes Anim_menu{
+    0%{
+        transform: translatey(10px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translatey(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes Selection{
+    
+    0%{
+        width: 0;
+        opacity: 0;
+        
+    }
+    
+    25%{
+        opacity: .9;
+    }
+
+    100%{
+        width: 70px;
+    }
+}
+
+@keyframes SelectionOut{
+    0%{
+        width: 70px;
+    }
+    25%{
+        opacity: .7;
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes Encoche{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes EncocheOut{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes prixSelect{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50px);
+    }
+}
+@keyframes prixSelectOut{
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes Like{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes spinning{
+    0%{
+        color: $cd_secondary;
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        color: $cd_tertiary;
+        transform: rotate(360deg) scale(1.5);
+    }
+   
+    100%{
+        
+        color: $cd_secondary;
+        transform: rotate(720deg) scale(1);
+    }
+}
+
+@keyframes loading{
+    0%{
+        
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -9999;
+        
+    }
+}
