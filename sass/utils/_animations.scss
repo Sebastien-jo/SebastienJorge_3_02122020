@@ -115,3 +115,33 @@
         
     }
 }
+
+@keyframes SelectionMobile{
+    
+    0%{
+        width: 0;
+        opacity: 0;
+        
+    }
+    
+    25%{
+        opacity: .9;
+    }
+
+    100%{
+        width: 90px;
+    }
+}
+
+@keyframes SelectionOutMobile{
+    0%{
+        width: 90px;
+    }
+    25%{
+        opacity: .7;
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+    }
+}

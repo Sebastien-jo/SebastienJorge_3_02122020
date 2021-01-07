@@ -95,6 +95,30 @@
     z-index: -9999;
   }
 }
+@keyframes SelectionMobile {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  100% {
+    width: 90px;
+  }
+}
+@keyframes SelectionOutMobile {
+  0% {
+    width: 90px;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
 body {
   font-family: "roboto";
 }
@@ -162,6 +186,7 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Photo3 img {
+    height: 750px;
     width: 100%;
     margin: 0px;
     border-radius: 0;
@@ -179,6 +204,18 @@ body {
   padding: 15px;
   border-radius: 25px;
 }
+@media screen and (max-width: 980px) {
+  .Menu {
+    padding-bottom: 80px;
+    margin-top: -150px;
+  }
+  .Menu h3 {
+    font-size: 2rem;
+  }
+  .Menu h2 {
+    font-size: 3.5rem;
+  }
+}
 .Menu .NomResto {
   font-family: "shrikhand";
   font-size: 1.5rem;
@@ -188,11 +225,17 @@ body {
   margin: 10px;
   align-items: center;
 }
+@media screen and (max-width: 980px) {
+  .Menu .NomResto {
+    font-size: 2rem;
+  }
+}
 .Menu .Coeur {
   position: relative;
   height: 24px;
   width: 24px;
   cursor: pointer;
+  margin-right: 50px;
 }
 .Menu .Coeur:hover .fas {
   opacity: 1;
@@ -229,8 +272,10 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Menu .BlocMenu {
-    font-size: 1.5rem;
-    height: 70px;
+    font-size: 2rem;
+    height: 95px;
+    padding: 10px;
+    border-radius: 30px;
   }
 }
 .Menu .BlocMenu:hover {
@@ -241,6 +286,11 @@ body {
   animation: Selection 0.8s both;
   overflow: hidden;
   transform-origin: right;
+}
+@media screen and (max-width: 980px) {
+  .Menu .BlocMenu:hover .Coche {
+    animation: SelectionMobile 0.8s both;
+  }
 }
 .Menu .BlocMenu:hover .Coche .fa-check-circle {
   animation: Encoche 0.8s;
@@ -288,6 +338,11 @@ body {
   font-size: 1.5rem;
   padding: 30px;
 }
+@media screen and (max-width: 980px) {
+  .Menu .Bouton-titre a {
+    font-size: 2rem;
+  }
+}
 .Menu .Bouton-titre:hover {
   opacity: 0.9;
   box-shadow: 3px 3px 4px 3px #c7c7c7;
@@ -302,7 +357,7 @@ body {
   font-weight: normal;
   padding-bottom: 5px;
   border-bottom: 4px solid #99E2D0;
-  width: 40px;
+  width: 60px;
 }
 @media screen and (max-width: 980px) {
   .Menu {
@@ -336,6 +391,11 @@ aside .autresResto {
   margin-top: 0;
   display: contents;
 }
+@media screen and (max-width: 980px) {
+  aside .autresResto {
+    padding-bottom: 50px;
+  }
+}
 aside .autresResto a {
   text-decoration: none;
   display: contents;
@@ -368,6 +428,7 @@ aside .autresResto img {
   aside .autresResto img {
     width: 800px;
     height: 550px;
+    border-radius: 30px;
   }
 }
 aside .autresResto .Nouveau {
@@ -410,6 +471,7 @@ aside .autresResto .Description {
   aside .autresResto .Description {
     width: 89%;
     bottom: 156px;
+    border-radius: 0 0 30px 30px;
   }
 }
 aside .autresResto .Description p {
@@ -437,6 +499,11 @@ aside .autresResto .Description .Coeur {
   cursor: pointer;
   font-size: 1.5rem;
   margin: 20px;
+}
+@media screen and (max-width: 980px) {
+  aside .autresResto .Description .Coeur {
+    font-size: 2rem;
+  }
 }
 aside .autresResto .Description .Coeur:hover .fas {
   opacity: 1;
@@ -492,6 +559,11 @@ aside .autresResto .Description p .nomGras {
   margin: 10px;
   margin-left: 40px;
 }
+@media screen and (max-width: 980px) {
+  .BasPage .logo {
+    font-size: 2.5rem;
+  }
+}
 .BasPage ul {
   display: flex;
   flex-direction: row;
@@ -514,6 +586,11 @@ aside .autresResto .Description p .nomGras {
 .BasPage ul a {
   text-decoration: none;
   color: #fff;
+}
+@media screen and (max-width: 980px) {
+  .BasPage ul a {
+    font-size: 1.5rem;
+  }
 }
 
 /* Animations*/
@@ -547,9 +624,22 @@ aside .autresResto .Description p .nomGras {
   top: 0;
   border-radius: 0 20px 20px 0;
 }
+@media screen and (max-width: 980px) {
+  .Coche {
+    font-size: 2rem;
+    width: 90px;
+    animation: SelectionOutMobile 0.6s both;
+  }
+}
 
 .fa-check-circle {
   animation: EncocheOut 0.6s both;
+}
+
+@media screen and (max-width: 980px) {
+  .fa-utensils {
+    margin-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=LaPaletteDuGout.css.map */

@@ -95,6 +95,30 @@
     z-index: -9999;
   }
 }
+@keyframes SelectionMobile {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  100% {
+    width: 90px;
+  }
+}
+@keyframes SelectionOutMobile {
+  0% {
+    width: 90px;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
 .Bloc_page {
   margin: auto;
   width: 100%;
@@ -146,7 +170,18 @@ header {
     box-shadow: 0px 8px 3px -3px #cdcdcd;
   }
   header .logo {
-    height: 100px;
+    display: none;
+  }
+  header .logo_R {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "shrikhand";
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -173,13 +208,20 @@ header {
 }
 @media screen and (max-width: 980px) {
   .BarreRecherche {
+    display: flex;
     justify-content: center;
     width: 96.9%;
+    height: 50px;
     border-radius: 0;
     margin: auto;
     font-size: 1.8rem;
   }
+  .BarreRecherche .fas {
+    margin-left: 120px;
+  }
   .BarreRecherche #barre_recherche {
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
     width: 300px;
     text-align: left;
@@ -217,6 +259,11 @@ header {
   color: #fff;
   font-size: 1.5rem;
   padding: 30px;
+}
+@media screen and (max-width: 980px) {
+  .Bouton_titre a {
+    font-size: 2rem;
+  }
 }
 .Bouton_titre:hover {
   opacity: 0.9;
@@ -293,28 +340,51 @@ header {
   }
   .Notice h2 {
     display: flex;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: -360px;
   }
   .Notice .Fonction {
+    font-size: 2.3rem;
     display: flex;
-    width: 500px;
-    height: 40px;
-    justify-content: space-around;
+    width: 750px;
+    height: 70px;
+    border-radius: 30px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Notice .fa-mobile-alt {
+    margin-right: 100px;
+  }
+  .Notice .fa-store {
+    margin-right: 80px;
+  }
+  .Notice .fa-list-ul {
+    margin-right: 85px;
   }
   .Notice .Num1 {
+    font-size: 2rem;
+    height: 40px;
+    width: 40px;
     position: relative;
-    top: -5px;
-    left: -38px;
+    top: 0px;
+    left: -35px;
   }
   .Notice .Num2 {
+    font-size: 2rem;
+    height: 40px;
+    width: 40px;
     position: relative;
-    top: -5px;
-    left: -38px;
+    top: 0px;
+    left: -35px;
   }
   .Notice .Num3 {
+    font-size: 2rem;
+    height: 40px;
+    width: 40px;
     position: relative;
-    top: -5px;
-    left: -38px;
+    top: 0px;
+    left: -35px;
   }
 }
 
@@ -326,6 +396,11 @@ header {
   margin-top: 30px;
   background: #f3f3f3;
   width: 100%;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants {
+    padding-bottom: 50px;
+  }
 }
 .Restaurants a {
   text-decoration: none;
@@ -359,6 +434,7 @@ header {
   .Restaurants img {
     width: 800px;
     height: 550px;
+    border-radius: 30px;
   }
 }
 .Restaurants .Nouveau {
@@ -401,6 +477,7 @@ header {
   .Restaurants .Description {
     width: 89%;
     bottom: 156px;
+    border-radius: 0 0 30px 30px;
   }
 }
 .Restaurants .Description p {
@@ -428,6 +505,11 @@ header {
   cursor: pointer;
   font-size: 1.5rem;
   margin: 20px;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants .Description .Coeur {
+    font-size: 2rem;
+  }
 }
 .Restaurants .Description .Coeur:hover .fas {
   opacity: 1;
@@ -467,6 +549,11 @@ header {
   margin: 10px;
   margin-left: 40px;
 }
+@media screen and (max-width: 980px) {
+  .BasPage .logo {
+    font-size: 2.5rem;
+  }
+}
 .BasPage ul {
   display: flex;
   flex-direction: row;
@@ -489,6 +576,28 @@ header {
 .BasPage ul a {
   text-decoration: none;
   color: #fff;
+}
+@media screen and (max-width: 980px) {
+  .BasPage ul a {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Restaurant1, .Restaurant4, .Restaurant3, .Restaurant2 {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .Restos {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .fa-utensils {
+    margin-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
