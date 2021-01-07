@@ -161,6 +161,9 @@ header {
   text-align: left;
   margin: 30px;
 }
+header .logo_R {
+  display: none;
+}
 @media screen and (max-width: 980px) {
   header {
     position: relative;
