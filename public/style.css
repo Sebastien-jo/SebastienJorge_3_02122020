@@ -498,7 +498,7 @@ header .logo_R {
 @media screen and (max-width: 980px) {
   .Restaurants .Description {
     width: 89%;
-    bottom: 176px;
+    bottom: 174px;
     border-radius: 0 0 30px 30px;
   }
 }
