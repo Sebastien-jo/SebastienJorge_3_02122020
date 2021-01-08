@@ -265,7 +265,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .Bouton_titre a {
-    font-size: 2rem;
+    font-size: 2.7rem;
   }
 }
 .Bouton_titre:hover {
@@ -278,8 +278,11 @@ header .logo_R {
 @media screen and (max-width: 980px) {
   .Bouton_titre {
     padding: 25px 40px;
-    border-radius: 40px;
+    border-radius: 50px;
     font-size: 2.3rem;
+  }
+  .Bouton_titre a {
+    font-size: 2.5rem;
   }
 }
 

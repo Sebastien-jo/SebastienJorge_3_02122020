@@ -219,10 +219,9 @@ body{
             align-self: center;
             @include Boutton;
             border: 0;
-            margin: 25px;
+            margin: 50px 25px;
             padding: 20px 60px;
             border-radius: 50px;
-            font-size: 2.4rem;
 
             &:hover{
                 transition-duration: 350ms;
@@ -230,6 +229,7 @@ body{
 
             & a{
                 padding: 10px 30px 10px 30px;
+                
             }
         }
     

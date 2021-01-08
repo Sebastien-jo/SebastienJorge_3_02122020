@@ -144,8 +144,12 @@ header{
         }   
         @include mobile_only{
             padding: 25px 40px;
-            border-radius: 40px;
+            border-radius: 50px;
             font-size: 2.3rem;
+
+            & a{
+                font-size: 2.5rem;
+            }
         } 
 }
 
