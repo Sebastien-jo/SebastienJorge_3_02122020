@@ -95,12 +95,12 @@ body{
     border-radius: 25px;
     @include mobile_only{
         padding-bottom: 80px;
-        margin-top: -150px;
+        margin-top: -100px;
         & h3{
-            font-size: 2rem;
+            font-size: 2.3rem;
         }
         & h2{
-            font-size: 3.5rem;
+            font-size: 3.7rem;
         }
     }
     
@@ -113,7 +113,7 @@ body{
             margin: 10px;
             align-items: center;
             @include mobile_only{
-                font-size: 2rem;
+                font-size: 2.3rem;
             }
         }
         & .Coeur{
@@ -159,9 +159,9 @@ body{
            border-radius: 20px;
            box-shadow: $b_shadow;
            @include mobile_only{
-                font-size: 2rem;
+                font-size: 2.2rem;
                 height: 95px;
-                padding: 10px;
+                padding: 25px;
                 border-radius: 30px;
             }
             &:hover{
@@ -218,7 +218,8 @@ body{
             @include Boutton;
             border: 0;
             margin: 25px;
-            padding: 10px;
+            padding: 20px 60px;
+            border-radius: 50px;
 
             &:hover{
                 transition-duration: 350ms;

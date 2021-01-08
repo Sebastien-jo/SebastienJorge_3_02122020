@@ -212,10 +212,10 @@ body {
     margin-top: -150px;
   }
   .Menu h3 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .Menu h2 {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
   }
 }
 .Menu .NomResto {
@@ -229,7 +229,7 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Menu .NomResto {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 .Menu .Coeur {
@@ -252,7 +252,6 @@ body {
 }
 .Menu .Coeur .fas {
   position: absolute;
-  bottom: 0;
   left: 0;
   opacity: 0;
   color: transparent;
@@ -273,9 +272,9 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Menu .BlocMenu {
-    font-size: 2rem;
+    font-size: 2.2rem;
     height: 95px;
-    padding: 10px;
+    padding: 25px;
     border-radius: 30px;
   }
 }
@@ -330,7 +329,8 @@ body {
   box-shadow: 2px 2px 5px 2px #d4d4d4;
   border: 0;
   margin: 25px;
-  padding: 10px;
+  padding: 20px 60px;
+  border-radius: 50px;
 }
 .Menu .Bouton-titre a {
   text-decoration: none;
@@ -518,7 +518,6 @@ aside .autresResto .Description .Coeur:hover .far {
 }
 aside .autresResto .Description .Coeur .fas {
   position: absolute;
-  bottom: 0;
   left: 0;
   opacity: 0;
   color: transparent;

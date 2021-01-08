@@ -141,7 +141,11 @@ header{
     @include Boutton;
         &:hover{
             transition-duration: 350ms;
-        }    
+        }   
+        @include mobile_only{
+            padding: 20px 10px;
+            border-radius: 40px;
+        } 
 }
 
 .Notice{
@@ -162,6 +166,8 @@ header{
            list-style-type: none;
             @include mobile_only{
                 margin-left: 150px;
+                padding: 20px;
+                margin-bottom: 40px;
             }
            
            >i{
