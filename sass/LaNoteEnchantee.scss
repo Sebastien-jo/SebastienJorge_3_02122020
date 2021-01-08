@@ -97,7 +97,8 @@ body{
         padding-bottom: 80px;
         margin-top: -100px;
         & h3{
-            font-size: 2.3rem;
+            font-size: 2.6rem;
+            width: 70px;
         }
         & h2{
             font-size: 3.7rem;
@@ -122,6 +123,11 @@ body{
            width: 24px;
            margin-right: 50px;
            cursor: pointer;
+           @include mobile_only{
+               font-size: 2.8rem;
+               width: 44px;
+               height: 44px;
+           }
                 &:hover{
                     & .fas{
                     opacity: 1;
@@ -159,8 +165,8 @@ body{
            border-radius: 20px;
            box-shadow: $b_shadow;
            @include mobile_only{
-                font-size: 2.2rem;
-                height: 95px;
+                font-size: 2.7rem;
+                height: 120px;
                 padding: 25px;
                 border-radius: 30px;
             }
@@ -220,6 +226,7 @@ body{
             margin: 25px;
             padding: 20px 60px;
             border-radius: 50px;
+            font-size: 2.4rem;
 
             &:hover{
                 transition-duration: 350ms;
@@ -236,7 +243,7 @@ body{
             font-weight: normal;
             padding-bottom: 5px;
             border-bottom: 4px solid $cd_tertiary;
-            width: 60px;  
+            width: 50px;  
 
         }
 

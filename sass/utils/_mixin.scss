@@ -149,7 +149,7 @@
             color: #000;
                 @include mobile_only{
                     width: 89%;
-                    bottom: 156px;
+                    bottom: 176px;
                     border-radius: 0 0 30px 30px;
                 }
                 
@@ -158,13 +158,13 @@
                     font-size: 1.2rem;
 
                     @include mobile_only{
-                        font-size: 1.7rem;
+                        font-size: 2.2rem;
                     }
                     & .nomGras{
                         font-weight: bold;
                         font-size: 1.4rem;
                         @include mobile_only{
-                            font-size: 1.9rem;
+                            font-size: 2.3rem;
                         }
                     }
                 }
@@ -177,7 +177,7 @@
                     font-size: 1.5rem;
                     margin: 20px;
                     @include mobile_only{
-                        font-size: 2rem;
+                        font-size: 2.5rem;
                     }
                 &:hover{
                     & .fas{
@@ -197,10 +197,19 @@
                 left: 0;
                 opacity: 0;
                 color: transparent;
+                @include mobile_only{
+                    left: -45px;
+                    top: 20px;
+                    width: 40px;
+                }
             }
             & .far{
                 position: absolute;
                 background: none;
+                @include mobile_only{
+                    right: 30px;
+                    top: 20px;
+                }
             }
         }
 

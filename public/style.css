@@ -279,6 +279,7 @@ header .logo_R {
   .Bouton_titre {
     padding: 25px 40px;
     border-radius: 40px;
+    font-size: 2.3rem;
   }
 }
 
@@ -494,7 +495,7 @@ header .logo_R {
 @media screen and (max-width: 980px) {
   .Restaurants .Description {
     width: 89%;
-    bottom: 156px;
+    bottom: 176px;
     border-radius: 0 0 30px 30px;
   }
 }
@@ -504,7 +505,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .Restaurants .Description p {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
 }
 .Restaurants .Description p .nomGras {
@@ -513,7 +514,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .Restaurants .Description p .nomGras {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
   }
 }
 .Restaurants .Description .Coeur {
@@ -526,7 +527,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .Restaurants .Description .Coeur {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .Restaurants .Description .Coeur:hover .fas {
@@ -546,9 +547,22 @@ header .logo_R {
   opacity: 0;
   color: transparent;
 }
+@media screen and (max-width: 980px) {
+  .Restaurants .Description .Coeur .fas {
+    left: -45px;
+    top: 20px;
+    width: 40px;
+  }
+}
 .Restaurants .Description .Coeur .far {
   position: absolute;
   background: none;
+}
+@media screen and (max-width: 980px) {
+  .Restaurants .Description .Coeur .far {
+    right: 30px;
+    top: 20px;
+  }
 }
 .Restaurants .nomGras {
   font-size: 1rem;
