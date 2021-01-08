@@ -188,7 +188,7 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Photo1 img {
-    height: 750px;
+    max-height: none;
     width: 100%;
     margin: 0px;
     border-radius: 0;
@@ -361,7 +361,7 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Menu {
-    margin: 0px;
+    margin: -100px 0 0 0;
     width: 96.9%;
     border-radius: 35px 35px 0 0;
   }
@@ -407,6 +407,8 @@ aside .autresResto h2 {
 @media screen and (max-width: 980px) {
   aside .autresResto h2 {
     font-size: 3rem;
+    margin-bottom: 0;
+    padding-top: 50px;
   }
 }
 aside .autresResto .Restos {

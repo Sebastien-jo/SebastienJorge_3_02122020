@@ -407,6 +407,8 @@ aside .autresResto h2 {
 @media screen and (max-width: 980px) {
   aside .autresResto h2 {
     font-size: 3rem;
+    margin-bottom: 0;
+    padding-top: 50px;
   }
 }
 aside .autresResto .Restos {

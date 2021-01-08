@@ -73,7 +73,8 @@ body{
             border-radius: 25px 25px 0 0;
 
             @include mobile_only{
-                height: 750px;
+                max-height: none;
+                height: 631px;
                 width: 100%;
                 margin: 0px;
                 border-radius: 0;
@@ -94,7 +95,7 @@ body{
     border-radius: 25px;
     @include mobile_only{
         padding-bottom: 80px;
-        margin-top: -150px;
+        margin: -100px 0 0 0;
         h3{
             font-size: 2.3rem;
         }
@@ -237,7 +238,6 @@ body{
         }
 
         @include mobile_only{
-            margin: 0px;
             width: 96.9%;
             border-radius: 35px 35px 0 0;
         }
