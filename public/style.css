@@ -53,12 +53,12 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
   }
 }
 @keyframes prixSelectOut {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
   }
   100% {
     transform: translateX(0);
@@ -104,12 +104,12 @@
     opacity: 0.9;
   }
   100% {
-    width: 90px;
+    width: 110px;
   }
 }
 @keyframes SelectionOutMobile {
   0% {
-    width: 90px;
+    width: 110px;
   }
   25% {
     opacity: 0.7;
@@ -117,6 +117,22 @@
   100% {
     width: 0;
     opacity: 0;
+  }
+}
+@keyframes elipse {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes elipseout {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
   }
 }
 .Bloc_page {
@@ -181,7 +197,7 @@ header .logo_R {
     align-items: center;
     font-family: "shrikhand";
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -214,21 +230,21 @@ header .logo_R {
     display: flex;
     justify-content: center;
     width: 96.9%;
-    height: 50px;
+    height: 60px;
     border-radius: 0;
     margin: auto;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .BarreRecherche .fas {
-    margin-left: 120px;
+    margin-left: 50px;
   }
   .BarreRecherche #barre_recherche {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 300px;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 50px;
   }
 }
 
@@ -335,12 +351,15 @@ header .logo_R {
 }
 .Notice .Num1 {
   top: 81px;
+  font-weight: normal;
 }
 .Notice .Num2 {
   top: 154px;
+  font-weight: normal;
 }
 .Notice .Num3 {
   top: 225px;
+  font-weight: normal;
 }
 .Notice .Fonction_1:hover, .Notice .Fonction_3:hover, .Notice .Fonction_2:hover {
   cursor: pointer;
@@ -362,7 +381,7 @@ header .logo_R {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-left: -360px;
+    margin-left: -290px;
   }
   .Notice .Fonction {
     font-size: 2.3rem;
@@ -372,6 +391,7 @@ header .logo_R {
     border-radius: 30px;
     justify-content: flex-start;
     align-items: center;
+    font-weight: bold;
   }
   .Notice .fa-mobile-alt {
     margin-right: 100px;
@@ -427,7 +447,7 @@ header .logo_R {
   display: contents;
 }
 .Restaurants h2 {
-  margin-left: 30px;
+  margin-left: 90px;
   font-size: 2rem;
 }
 @media screen and (max-width: 980px) {
@@ -585,7 +605,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .BasPage .logo {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 .BasPage ul {
@@ -597,6 +617,9 @@ header .logo_R {
   .BasPage ul {
     flex-direction: column;
     align-self: flex-start;
+  }
+  .BasPage ul .fa-utensils {
+    margin-right: 22px;
   }
 }
 .BasPage ul li {
@@ -613,7 +636,7 @@ header .logo_R {
 }
 @media screen and (max-width: 980px) {
   .BasPage ul a {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 

@@ -66,12 +66,12 @@
     }
 
     100%{
-        transform: translateX(-50px);
+        transform: translateX(-70px);
     }
 }
 @keyframes prixSelectOut{
     0%{
-        transform: translateX(-50px);
+        transform: translateX(-70px);
     }
     100%{
         transform: translateX(0);
@@ -129,13 +129,13 @@
     }
 
     100%{
-        width: 90px;
+        width: 110px;
     }
 }
 
 @keyframes SelectionOutMobile{
     0%{
-        width: 90px;
+        width: 110px;
     }
     25%{
         opacity: .7;
@@ -143,5 +143,22 @@
     100%{
         width: 0;
         opacity: 0;
+    }
+}
+@keyframes elipse{
+    0%{
+        width: 100%;
+    }
+    100%{ 
+        width: 70%;
+    }
+}
+
+@keyframes elipseout{
+    0%{
+        width: 70%;
+    }
+    100%{ 
+        width: 100%;
     }
 }

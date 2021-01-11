@@ -55,7 +55,12 @@ body{
 
 
             & .fa-arrow-left{
-                margin-top: 70px;
+                margin-top: 60px;
+                font-size: 2.2rem;
+                margin-left: 50px;
+            }
+            & .logo{
+                margin-left: -60px;
             }
 
     }
@@ -116,6 +121,7 @@ body{
             align-items: center;
             @include mobile_only{
                 font-size: 2.3rem;
+                margin-left: 30px;
             }
         }
         & .Coeur{
@@ -164,9 +170,10 @@ body{
            border-radius: 20px;
            box-shadow: $b_shadow;
            @include mobile_only{
-                font-size: 2.7rem;
-                height: 120px;
+                font-size: 2.5rem;
+                height: 130px;
                 padding: 25px;
+                padding-bottom: 5px;
                 border-radius: 30px;
             }
            &:hover{
@@ -187,13 +194,24 @@ body{
                     animation: prixSelect .8s both;
                     
                 }
+                & p{
+                    animation: elipse .6s both;
+                }
+                & h4{
+                    animation: elipse .6s both;
+                }
             }
            & .prix{
                 position: absolute;
                 right: 5%;
-                top: 50%;
+                top: 57%;
                 margin-right: 5px;
                 animation: prixSelectOut .6s both;
+                font-weight: bold;
+                font-size: 1rem;
+                @include mobile_only{
+                    font-size: 2.2rem;
+                }
            }
 
            & h4{
@@ -201,7 +219,8 @@ body{
                text-overflow: ellipsis;
                white-space: nowrap;
                overflow: hidden;
-               width: 70%;;
+               width: 100%;
+               animation: elipseout .8s both;
            }
 
            & p{
@@ -209,7 +228,11 @@ body{
                text-overflow: ellipsis;
                white-space: nowrap;
                overflow: hidden;
-               width: 70%;;
+               width: 100%;
+               animation: elipseout .8s both;
+               @include mobile_only{
+                   font-size: 2.3rem;
+               }
            }
         }
         & .Bouton-titre{
@@ -237,13 +260,17 @@ body{
             padding-bottom: 5px;
             border-bottom: 4px solid $cd_tertiary;
             width: 50px;  
+            @include mobile_only{
+                margin-left: 30px;
+            }
 
         }
 
         @include mobile_only{
             margin: -100px 0 0 0;
             width: 96.9%;
-            border-radius: 35px 35px 0 0;
+            border-radius: 80px 80px 0 0;
+           
         }
 } 
 
@@ -340,8 +367,8 @@ aside{
     top: 0;
     border-radius: 0 20px 20px 0;
     @include mobile_only{
-        font-size: 2rem;
-        width: 90px;
+        font-size: 3rem;
+        width: 110px;
         animation: SelectionOutMobile .6s both;
     }
 }

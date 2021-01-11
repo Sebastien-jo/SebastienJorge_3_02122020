@@ -53,12 +53,12 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
   }
 }
 @keyframes prixSelectOut {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
   }
   100% {
     transform: translateX(0);
@@ -104,12 +104,12 @@
     opacity: 0.9;
   }
   100% {
-    width: 90px;
+    width: 110px;
   }
 }
 @keyframes SelectionOutMobile {
   0% {
-    width: 90px;
+    width: 110px;
   }
   25% {
     opacity: 0.7;
@@ -117,6 +117,22 @@
   100% {
     width: 0;
     opacity: 0;
+  }
+}
+@keyframes elipse {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes elipseout {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
   }
 }
 body {
@@ -170,7 +186,12 @@ body {
     background: none;
   }
   .ALFh .fa-arrow-left {
-    margin-top: 70px;
+    margin-top: 60px;
+    font-size: 2.2rem;
+    margin-left: 50px;
+  }
+  .ALFh .logo {
+    margin-left: -60px;
   }
 }
 
@@ -231,6 +252,7 @@ body {
 @media screen and (max-width: 980px) {
   .Menu .NomResto {
     font-size: 2.3rem;
+    margin-left: 30px;
   }
 }
 .Menu .Coeur {
@@ -280,9 +302,10 @@ body {
 }
 @media screen and (max-width: 980px) {
   .Menu .BlocMenu {
-    font-size: 2.7rem;
-    height: 120px;
+    font-size: 2.5rem;
+    height: 130px;
     padding: 25px;
+    padding-bottom: 5px;
     border-radius: 30px;
   }
 }
@@ -306,26 +329,46 @@ body {
 .Menu .BlocMenu:hover .prix {
   animation: prixSelect 0.8s both;
 }
+.Menu .BlocMenu:hover p {
+  animation: elipse 0.6s both;
+}
+.Menu .BlocMenu:hover h4 {
+  animation: elipse 0.6s both;
+}
 .Menu .BlocMenu .prix {
   position: absolute;
   right: 5%;
-  top: 50%;
+  top: 57%;
   margin-right: 5px;
   animation: prixSelectOut 0.6s both;
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media screen and (max-width: 980px) {
+  .Menu .BlocMenu .prix {
+    font-size: 2.2rem;
+  }
 }
 .Menu .BlocMenu h4 {
   margin: 4px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 70%;
+  width: 100%;
+  animation: elipseout 0.8s both;
 }
 .Menu .BlocMenu p {
   margin: 4px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 70%;
+  width: 100%;
+  animation: elipseout 0.8s both;
+}
+@media screen and (max-width: 980px) {
+  .Menu .BlocMenu p {
+    font-size: 2.3rem;
+  }
 }
 .Menu .Bouton-titre {
   display: flex;
@@ -368,10 +411,15 @@ body {
   width: 50px;
 }
 @media screen and (max-width: 980px) {
+  .Menu h3 {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 980px) {
   .Menu {
     margin: -100px 0 0 0;
     width: 96.9%;
-    border-radius: 35px 35px 0 0;
+    border-radius: 80px 80px 0 0;
   }
 }
 
@@ -409,7 +457,7 @@ aside .autresResto a {
   display: contents;
 }
 aside .autresResto h2 {
-  margin-left: 30px;
+  margin-left: 90px;
   font-size: 2rem;
 }
 @media screen and (max-width: 980px) {
@@ -480,7 +528,7 @@ aside .autresResto .Description {
 @media screen and (max-width: 980px) {
   aside .autresResto .Description {
     width: 89%;
-    bottom: 176px;
+    bottom: 174px;
     border-radius: 0 0 30px 30px;
   }
 }
@@ -583,7 +631,7 @@ aside .autresResto .Description p .nomGras {
 }
 @media screen and (max-width: 980px) {
   .BasPage .logo {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 .BasPage ul {
@@ -595,6 +643,9 @@ aside .autresResto .Description p .nomGras {
   .BasPage ul {
     flex-direction: column;
     align-self: flex-start;
+  }
+  .BasPage ul .fa-utensils {
+    margin-right: 22px;
   }
 }
 .BasPage ul li {
@@ -611,7 +662,7 @@ aside .autresResto .Description p .nomGras {
 }
 @media screen and (max-width: 980px) {
   .BasPage ul a {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -648,8 +699,8 @@ aside .autresResto .Description p .nomGras {
 }
 @media screen and (max-width: 980px) {
   .Coche {
-    font-size: 2rem;
-    width: 90px;
+    font-size: 3rem;
+    width: 110px;
     animation: SelectionOutMobile 0.6s both;
   }
 }
